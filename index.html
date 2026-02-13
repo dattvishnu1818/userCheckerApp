@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Checker App</title>
+    <style>
+        body {
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .Container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 20px;
+            position: relative;
+            /* z-index: 30; */
+
+            /* border: 2px solid black; */
+        }
+
+        #btn {
+            padding: 8px 32px;
+            border-radius: 40px;
+        }
+
+        #output {
+            border: 2px solid orange;
+            width: 200px;
+            height: 25px;
+            border-radius: 40px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #inputId {
+            width: 200px;
+            height: 25px;
+            border-radius: 40px;
+            padding: 5px;
+            text-align: center;
+            outline: none;
+            border: none;
+            /* border-bottom: 1px solid orange; */
+        }
+
+        #inputId:focus {
+            border: 2px solid ;
+            outline: none;
+            box-shadow: 10px 10px 5px lightblue;
+        }
+
+        .square {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .square i {
+            position: absolute;
+            inset: 0;
+            border: 1px solid orange;
+            transition: 0.5s;
+        }
+
+        .square i:nth-child(1) {
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            animation: animate 6s linear infinite;
+
+        }
+
+        .square i:nth-child(2) {
+            border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+            animation: animate 6s linear infinite;
+        }
+
+        .square i:nth-child(3) {
+            border-radius: 45% 32% 50% 59% / 38% 62% 63% 37%;
+            animation: animate2 6s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animate2 {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    <div class="square">
+        <i></i>
+        <i></i>
+        <i></i>
+        <form action="" class="wrap">
+            <div class="Container">
+                <h2>User Checker App</h2>
+                <input type="text" id="inputId" placeholder="Enter your Name">
+                <p id="output">Output Field </p>
+                <button id="btn"> Submit </button>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
